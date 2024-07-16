@@ -28,7 +28,7 @@ const FormSchema = z.object({
   items: z.array(z.string()),
 });
 
-export function Interests() {
+const Interests = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: { items: [] },
@@ -124,4 +124,6 @@ export function Interests() {
       </div>
     </div>
   );
-}
+};
+
+export default Interests;
